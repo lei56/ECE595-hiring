@@ -2,7 +2,7 @@
 
 ## Pipeline
 ```
-[1] Download templates. (Jaye)                         src/fetch_templates.py
+[1] Download templates. (Harshit)                         src/fetch_templates.py
     → data/template/*.txt
     │
     ▼
