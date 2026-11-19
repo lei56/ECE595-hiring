@@ -3,26 +3,26 @@
 ## Pipeline
 ```
 [1] Download templates. (Jaye)                         src/fetch_templates.py
-    → experiments/template/*.txt
+    → data/template/*.txt
     │
     ▼
 [2] Populate templates with names. (Harshit)           src/preprocessing.py
-    → experiments/resume/*.txt
+    → data/resume/*.txt
     │
     ▼
 [3] Run experiments. (Jaye)                            src/llm_wrapper.py
   [3.1] Prompt Claude. (Riteng)                        src/claude_interface.py
-    → experiments/raw/claude_*.txt
+    → data/raw/claude_*.txt
   [3.2] Prompt Gemma. (Woosik)                         src/gemma_interface.py
-    → experiments/raw/gemma_*.txt
+    → data/raw/gemma_*.txt
     │
     ▼
   [3.3] Aggregate data. (Jaye)                         src/llm_wrapper.py
-    → experiments/agg/*.csv
+    → data/agg/*.csv
     │
     ▼
 [4] Generate plots. (Jaye)                             src/plot_all.py
-    → experiments/plots/*.png
+    → data/plots/*.png
 ```
 The `setup.sh` script performs steps 1 and 2, and `run.sh` performs steps 3 and 4.
 
