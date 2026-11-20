@@ -12,7 +12,7 @@ import random
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("-c", "--config", type=str, default="./config.json", help="Path to the JSON config file.")
+    p.add_argument("-c", "--config", type=str, default="./config/config.json", help="Path to the JSON config file.")
     args = p.parse_args()
     
     config = read_config(args.config)

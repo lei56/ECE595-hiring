@@ -2,8 +2,8 @@
 set -euo pipefail
 
 PYTHON_BIN="${PYTHON_BIN:-python3}"
-CONFIG_FILE="config.json"
-TEST_CONFIG="test.json"
+CONFIG_FILE="config/config.json"
+TEST_CONFIG="config/test.json"
 
 # Check input flags
 test=false

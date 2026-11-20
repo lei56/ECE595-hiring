@@ -73,10 +73,11 @@ ECE595-hiring/
 │   ├── claude_interface.py                       prompts Claude and reports responses
 │   ├── gemma_interface.py                        prompts Gemma and reports responses
 │   └── plot_all.py                               generates final output plots
+├── config/                                       configuration files
+│   ├── requirements.txt                          dependency file
+│   ├── config.json                               runtime configuration
+│   └── test.json                                 test configuration
 ├── setup.sh                                      sets up environment and installs dependencies
-├── run.sh                                        runs end-to-end pipeline
-├── requirements.txt                              dependency file
-├── config.json                                   runtime configuration
-└── test.json                                     test configuration
+└── run.sh                                        runs end-to-end pipeline
 ```
 

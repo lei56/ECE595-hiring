@@ -11,7 +11,7 @@ DATA_DIRS=(
 )
 VENV_DIR=".venv"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
-REQUIREMENTS_FILE="requirements.txt"
+REQUIREMENTS_FILE="config/requirements.txt"
 
 # Create data directories
 echo "Creating data directories..."
