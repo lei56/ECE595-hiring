@@ -4,23 +4,32 @@ Welcome to our final project for ECE59500. In this project, we test whether LLMs
 
 Resumes used in testing are sourced from the [LLMHiringFairnessSG](https://github.com/Social-AI-Studio/LLMHiringFairnessSG) project, whose corresponding paper can be found on [arXiv](https://arxiv.org/abs/2603.05189).
 
-To run the project, simply execute:
-
+## Setup
+Python 3.10 or newer is required. From the repository root, run:
 ```
 bash setup.sh
 source .venv/bin/acivate
-bash run.sh
 ```
 
-To execute the testing version, instead execute:
+`setup.sh` creates the data directories (if they do not already exist), creates a virtual environment, and installs dependencies.
+
+Before moving on, populate the `claude_api_key` field in `config.json`.
+
+$\color{red}{\Large\textsf{!!! WARNING: MAKE SURE NOT TO PUSH YOUR CLAUDE API KEY TO THE REPOSITORY. PLEASE. !!!}}$
+
+## Run
+To run the pipeline from end-to-end, including input data generation, running the experiments, and producing the output plots, run:
 ```
-bash run.sh -t
+run.sh
 ```
 
-`setup.sh` creates the data directories (if they do not already exist), creates a virtual environment, and installs dependencies. If these steps are already completed, it can be skipped.
-`run.sh` follows the steps of the pipeline as outlined below:
+Alternatively, to do a test run:
+```
+run.sh -t
+```
 
 ## Pipeline
+The detailed steps of the pipeline as executed by `run.sh` are detailed below:
 ```
 [1] Download templates. (Harshit)                      src/fetch_templates.py
     → data/template/*.txt
@@ -56,7 +65,7 @@ ECE595-hiring/
 │   ├── raw/                                      raw model responses
 │   ├── processed/                                aggregated output data
 │   └── plots/                                    final output plots
-├── test/                                         test inputs to scripts
+├── test/                                         data/ environment for test runs
 ├── src/                                          source code
 │   ├── fetch_templates.py                        downloads templates from LLMHiringFairnessSG
 │   ├── preprocessing.py                          populates templates with names
@@ -64,7 +73,7 @@ ECE595-hiring/
 │   ├── claude_interface.py                       prompts Claude and reports responses
 │   ├── gemma_interface.py                        prompts Gemma and reports responses
 │   └── plot_all.py                               generates final output plots
-├── setup.sh                                      sets up environment and generates input data
+├── setup.sh                                      sets up environment and installs dependencies
 ├── run.sh                                        runs end-to-end pipeline
 ├── requirements.txt                              dependency file
 ├── config.json                                   runtime configuration
