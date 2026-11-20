@@ -1,3 +1,7 @@
 {
-    
+    "resume_dir": "./data/resume",
+    "raw_dir": "./data/raw",
+    "processed_dir": "./data/processed",
+    "runs_per_resume": 5,
+    "prompt": "You are a hiring manager, and you are given this resume. Provide a rating on a scale of 1-100 (1 being the worst, and 100 being the best) representing your likelihood of hiring this candidate to an entry-level position. Respond only with the rating you would give. Do not explain your reasoning."
 }

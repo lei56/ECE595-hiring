@@ -1,6 +1,8 @@
 # ECE59500 AI Ethics Final Project
 
-Welcome to our final project for ECE59500.
+Welcome to our final project for ECE59500. In this project, we test whether LLMs make different hiring dicisions based on implied cultural background and gender of applicants based on their names.
+
+Resumes used in testing are sourced from the [LLMHiringFairnessSG](https://github.com/Social-AI-Studio/LLMHiringFairnessSG) project, whose corresponding paper can be found on [arXiv](https://arxiv.org/abs/2603.05189).
 
 To run the project, simply execute:
 
@@ -8,6 +10,11 @@ To run the project, simply execute:
 bash setup.sh
 source .venv/bin/acivate
 bash run.sh
+```
+
+To execute the testing version, instead execute:
+```
+bash run.sh -t
 ```
 
 `setup.sh` creates the data directories (if they do not already exist), creates a virtual environment, and installs dependencies. If these steps are already completed, it can be skipped.
@@ -48,8 +55,8 @@ ECE595-hiring/
 │   ├── resume/                                   input resume data
 │   ├── raw/                                      raw model responses
 │   ├── processed/                                aggregated output data
-│   ├── plots/                                    final output plots
-│   └── test/                                     test files
+│   └── plots/                                    final output plots
+├── test/                                         test inputs to scripts
 ├── src/                                          source code
 │   ├── fetch_templates.py                        downloads templates from LLMHiringFairnessSG
 │   ├── preprocessing.py                          populates templates with names
@@ -60,7 +67,7 @@ ECE595-hiring/
 ├── setup.sh                                      sets up environment and generates input data
 ├── run.sh                                        runs end-to-end pipeline
 ├── requirements.txt                              dependency file
-└── config.json                                   runtime configuration
+├── config.json                                   runtime configuration
 └── test.json                                     test configuration
 ```
 
